@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.0.final using JasperReports Library version 6.3.0  -->
+<!-- 2016-10-26T00:28:47 -->
+<jasperReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="report1" pageWidth="240" pageHeight="155" orientation="Landscape" columnWidth="240" leftMargin="0"
+              rightMargin="0" topMargin="0" bottomMargin="0" uuid="3b9fd3c1-ba4d-4238-8713-42a59dd01f6e">
+    <property name="ireport.zoom" value="1.0"/>
+    <property name="ireport.x" value="0"/>
+    <property name="ireport.y" value="0"/>
+    <property name="com.jaspersoft.studio.unit." value="cm"/>
+    <property name="com.jaspersoft.studio.unit.pageHeight" value="cm"/>
+    <property name="com.jaspersoft.studio.unit.pageWidth" value="cm"/>
+    <property name="com.jaspersoft.studio.unit.topMargin" value="cm"/>
+    <property name="com.jaspersoft.studio.unit.bottomMargin" value="cm"/>
+    <property name="com.jaspersoft.studio.unit.leftMargin" value="cm"/>
+    <property name="com.jaspersoft.studio.unit.rightMargin" value="cm"/>
+    <property name="com.jaspersoft.studio.unit.columnWidth" value="cm"/>
+    <property name="com.jaspersoft.studio.unit.columnSpacing" value="cm"/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <parameter name="licence" class="java.lang.String">
+        <parameterDescription><![CDATA[]]></parameterDescription>
+    </parameter>
+    <parameter name="nom" class="java.lang.String">
+        <parameterDescription><![CDATA[]]></parameterDescription>
+    </parameter>
+    <parameter name="prenom" class="java.lang.String">
+        <parameterDescription><![CDATA[]]></parameterDescription>
+    </parameter>
+    <parameter name="dateNaissance" class="java.lang.String">
+        <parameterDescription><![CDATA[]]></parameterDescription>
+    </parameter>
+    <parameter name="sexe" class="java.lang.String">
+        <parameterDescription><![CDATA[]]></parameterDescription>
+    </parameter>
+    <parameter name="categorie" class="java.lang.String">
+        <parameterDescription><![CDATA[]]></parameterDescription>
+    </parameter>
+    <parameter name="type" class="java.lang.String">
+        <parameterDescription><![CDATA[]]></parameterDescription>
+    </parameter>
+    <parameter name="club" class="java.lang.String">
+        <parameterDescription><![CDATA[]]></parameterDescription>
+    </parameter>
+    <parameter name="delivre" class="java.lang.String">
+        <parameterDescription><![CDATA[]]></parameterDescription>
+    </parameter>
+    <parameter name="valable" class="java.lang.String">
+        <parameterDescription><![CDATA[]]></parameterDescription>
+    </parameter>
+    <parameter name="photo" class="java.io.ByteArrayInputStream">
+        <parameterDescription><![CDATA[]]></parameterDescription>
+    </parameter>
+    <parameter name="typeLicence1" class="java.io.InputStream">
+        <parameterDescription><![CDATA[]]></parameterDescription>
+    </parameter>
+    <parameter name="licenceColor" class="java.io.InputStream">
+        <parameterDescription><![CDATA[]]></parameterDescription>
+    </parameter>
+    <parameter name="equipe" class="java.lang.String"/>
+    <parameter name="typeLicence2" class="java.io.InputStream">
+        <parameterDescription><![CDATA[]]></parameterDescription>
+    </parameter>
+    <parameter name="typeLicence3" class="java.io.InputStream">
+        <parameterDescription><![CDATA[]]></parameterDescription>
+    </parameter>
+    <parameter name="typeLicence4" class="java.io.InputStream">
+        <parameterDescription><![CDATA[]]></parameterDescription>
+    </parameter>
+    <parameter name="typeLicenceLibelle1" class="java.lang.String">
+        <parameterDescription><![CDATA[]]></parameterDescription>
+    </parameter>
+    <parameter name="typeLicenceLibelle2" class="java.lang.String">
+        <parameterDescription><![CDATA[]]></parameterDescription>
+    </parameter>
+    <parameter name="typeLicenceLibelle3" class="java.lang.String">
+        <parameterDescription><![CDATA[]]></parameterDescription>
+    </parameter>
+    <parameter name="typeLicenceLibelle4" class="java.lang.String">
+        <parameterDescription><![CDATA[]]></parameterDescription>
+    </parameter>
+    <background>
+        <band height="155">
+            <image scaleImage="RetainShape">
+                <reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="240" height="155"
+                               uuid="2fa92e62-9980-423e-8925-c639d5b8a8f6"/>
+                <imageExpression>
+                    <![CDATA["E:/dev/src/spreadSheetReader/src/main/resources/FKBF_FondLicence.png"]]></imageExpression>
+            </image>
+            <image>
+                <reportElement x="0" y="0" width="70" height="60" uuid="cb2471bd-dfde-4536-80c1-6474ea7b13c5"/>
+                <imageExpression>
+                    <![CDATA["E:/dev/src/spreadSheetReader/src/main/resources/FKBF_TitreSaison.png"]]></imageExpression>
+            </image>
+            <image>
+                <reportElement x="70" y="25" width="170" height="85" uuid="de51e83c-abe4-4c7e-a0c7-cae3fc683ba7"/>
+                <imageExpression><![CDATA[$P{licenceColor}]]></imageExpression>
+            </image>
+            <textField>
+                <reportElement x="81" y="89" width="104" height="10" forecolor="#FFFFFF"
+                               uuid="422b2455-a767-4880-a16a-7a2da2615102"/>
+                <textElement>
+                    <font size="7"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Délivrée le " + $P{delivre}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="81" y="97" width="136" height="10" forecolor="#FFFFFF"
+                               uuid="422b2455-a767-4880-a16a-7a2da2615102"/>
+                <textElement>
+                    <font size="7"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Valable jusqu'au " + $P{valable}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="81" y="28" width="104" height="16" forecolor="#FFFFFF"
+                               uuid="422b2455-a767-4880-a16a-7a2da2615102"/>
+                <textElement>
+                    <font size="7"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Licence n° " + $P{licence}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="81" y="40" width="104" height="16" forecolor="#FFFFFF"
+                               uuid="422b2455-a767-4880-a16a-7a2da2615102"/>
+                <textElement>
+                    <font size="10" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{nom}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="81" y="51" width="104" height="14" forecolor="#FFFFFF"
+                               uuid="422b2455-a767-4880-a16a-7a2da2615102"/>
+                <textElement>
+                    <font size="10" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{prenom}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="81" y="70" width="68" height="12" forecolor="#FFFFFF"
+                               uuid="422b2455-a767-4880-a16a-7a2da2615102"/>
+                <textElement>
+                    <font size="7"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{dateNaissance}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="146" y="70" width="68" height="12" forecolor="#FFFFFF"
+                               uuid="422b2455-a767-4880-a16a-7a2da2615102"/>
+                <textElement>
+                    <font size="7"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Sexe : " + $P{sexe}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="94" y="110" width="148" height="10" forecolor="#000000"
+                               uuid="422b2455-a767-4880-a16a-7a2da2615102"/>
+                <textElement>
+                    <font size="5"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Club : " + $P{club}]]></textFieldExpression>
+            </textField>
+            <textField pattern="" isBlankWhenNull="true">
+                <reportElement x="81" y="79" width="104" height="12" forecolor="#FFFFFF"
+                               uuid="422b2455-a767-4880-a16a-7a2da2615102"/>
+                <textElement>
+                    <font size="7"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{type}]]></textFieldExpression>
+            </textField>
+            <image scaleImage="FillFrame">
+                <reportElement mode="Transparent" x="198" y="29" width="36" height="42"
+                               uuid="eca31476-7451-45fc-8df2-6eb880af1b1d">
+                    <property name="com.jaspersoft.studio.unit.height" value="cm"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{photo}]]></imageExpression>
+            </image>
+            <staticText>
+                <reportElement x="1" y="135" width="78" height="20" uuid="48328361-5a3e-4264-8377-823021ac68db"/>
+                <textElement>
+                    <font size="5"/>
+                </textElement>
+                <text><![CDATA[51, av de la gare de Saint Joseph
+44300 Nantes
+fkbf@kin-ball.fr - www.kin-ball.fr]]></text>
+            </staticText>
+            <image>
+                <reportElement x="11" y="112" width="30" height="29" uuid="eb37ab27-11ff-41d3-bbbb-19696bfc2b20"/>
+                <imageExpression>
+                    <![CDATA["E:/dev/src/spreadSheetReader/src/main/resources/logo.png"]]></imageExpression>
+            </image>
+            <textField isBlankWhenNull="true">
+                <reportElement positionType="FixRelativeToBottom" x="94" y="117" width="148" height="10"
+                               forecolor="#000000" uuid="03583917-8de0-49fa-b215-99678ab6caf6"/>
+                <textElement>
+                    <font size="5"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{equipe}]]></textFieldExpression>
+            </textField>
+            <image>
+                <reportElement x="187" y="75" width="53" height="10" uuid="39a7b78e-db23-4604-8fc1-8c9004bde33e">
+                    <property name="com.jaspersoft.studio.unit.width" value="cm"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="cm"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{typeLicence1}]]></imageExpression>
+            </image>
+            <image>
+                <reportElement x="187" y="83" width="53" height="10" uuid="c51d2ec3-d2de-4b0b-a4b0-e8e2254e0ccc"/>
+                <imageExpression><![CDATA[$P{typeLicence2}]]></imageExpression>
+            </image>
+            <image>
+                <reportElement x="187" y="91" width="53" height="10" uuid="f3d90569-4863-4361-ba84-a1f2296a7b1f"/>
+                <imageExpression><![CDATA[$P{typeLicence3}]]></imageExpression>
+            </image>
+            <image>
+                <reportElement key="" x="187" y="99" width="53" height="10"
+                               uuid="21a33d30-c149-4ae0-9521-f79cd19d6cb3"/>
+                <imageExpression><![CDATA[$P{typeLicence4}]]></imageExpression>
+            </image>
+            <textField isBlankWhenNull="true">
+                <reportElement x="197" y="75" width="53" height="15" forecolor="#FFFFFF"
+                               uuid="7ea475d4-15ac-4e5a-b2a7-ee09b4cd832e"/>
+                <textElement>
+                    <font size="5"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{typeLicenceLibelle1}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="197" y="83" width="53" height="12" forecolor="#FFFFFF"
+                               uuid="eafb4599-ce31-40b6-88fd-fddc7146deb4"/>
+                <textElement>
+                    <font size="5"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{typeLicenceLibelle2}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="197" y="91" width="53" height="12" forecolor="#FFFFFF"
+                               uuid="eafb4599-ce31-40b6-88fd-fddc7146deb4"/>
+                <textElement>
+                    <font size="5"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{typeLicenceLibelle3}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="197" y="99" width="53" height="12" forecolor="#FFFFFF"
+                               uuid="eafb4599-ce31-40b6-88fd-fddc7146deb4"/>
+                <textElement>
+                    <font size="5"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{typeLicenceLibelle4}]]></textFieldExpression>
+            </textField>
+        </band>
+    </background>
+</jasperReport>
